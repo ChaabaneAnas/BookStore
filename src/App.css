@@ -1,32 +1,34 @@
 html {
-    box-sizing: border-box;
-    font-size: 100%;
-  }
+  box-sizing: border-box;
+  font-size: 100%;
+}
 
-  *{
-    text-decoration: none;
-    list-style: none;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
+* {
+  text-decoration: none;
+  list-style: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 nav {
-    display: flex;
-    width: 55%;
-    justify-content: space-around;
-    align-items: center;
-    text-decoration: none;
-
+  display: flex;
+  width: 55%;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 40%;
 }
 
 form button {
-    width: 39%;
+  width: 39%;
 }
