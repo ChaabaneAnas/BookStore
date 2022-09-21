@@ -1,5 +1,5 @@
 const CHECKSTATUE = 'redux/categories/categories/CHECKSTATUE';
-const initialState = [];
+const initialState = '';
 
 export default function categoriesReducer(state = initialState, action) {
   if (action.type === 'redux/categories/categories/CHECKSTATUE') {
