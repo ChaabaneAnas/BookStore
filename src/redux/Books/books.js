@@ -1,6 +1,5 @@
 const ADD = 'redux/Books/book/ADD';
 const REMOVE = 'redux/Books/book/REMOVE';
-
 const initialState = [];
 
 export default function bookReducer(state = initialState, action) {
@@ -10,8 +9,8 @@ export default function bookReducer(state = initialState, action) {
         ...state,
         {
           id: action.id,
-          title: action.title,
-          author: action.author,
+          title: action.payload.title,
+          author: action.payload.author,
         },
       ];
 
@@ -22,10 +21,10 @@ export default function bookReducer(state = initialState, action) {
   }
 }
 
-const addBook = (id, title, author) => ({
+const addBook = (id, payload) => ({
   type: ADD,
-  title,
-  author,
+  payload,
+  id,
 });
 
 const remBook = (id) => ({
