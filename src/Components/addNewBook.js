@@ -5,7 +5,11 @@ import { addBook } from '../redux/Books/books';
 
 const AddNewBook = () => {
   const dispatch = useDispatch();
-  const [newBook, setBook] = useState({ title: '', author: '' });
+  const [newBook, setBook] = useState({
+    id: '',
+    title: '',
+    author: '',
+  });
   const titleHandler = (e) => {
     setBook({
       ...newBook, title: e.target.value,
@@ -17,15 +21,21 @@ const AddNewBook = () => {
       ...newBook, author: e.target.value,
     });
   };
-  const SubmitBook = { ...newBook };
+
+  const SubmitBook = { ...newBook, id: uuidv4() };
 
   const submithandler = (e) => {
     e.preventDefault();
-    dispatch(addBook(uuidv4(), SubmitBook));
+    dispatch(addBook(SubmitBook));
+    setBook({
+      ...newBook,
+      title: '',
+      author: '',
+    });
   };
   return (
     <form action="#" onSubmit={submithandler}>
-      <h3>Add new book</h3>
+      <h3 className="addBook">Add new book</h3>
       <div className="inputCont">
         <input type="text" className="title" placeholder="book title" onChange={titleHandler} required />
         <input type="text" className="author" placeholder="book author" onChange={authorHandler} required />

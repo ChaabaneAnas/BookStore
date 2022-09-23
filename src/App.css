@@ -90,19 +90,170 @@ form button {
 }
 
 .addBtn {
-    flex: 1 1 auto;
-    width: 11.5rem;
-    height: 2.813rem;
-    padding: 0.801rem 1.188rem 0.886rem 1.375rem;
-    border-radius: 3px;
-    background-color: #0290ff;
+  flex: 1 1 auto;
+  width: 11.5rem;
+  height: 2.813rem;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
   }
 
-  img {
-      width: 1.063rem;
-      height: 1.063rem;
-      background-color: #0290ff;
-    }
+img {
+  width: 1.063rem;
+  height: 1.063rem;
+  background-color: #0290ff;
+  }
 
+  addBookul {
+  margin-top: 20%;
+  }
 
+  .addBook {
+    width: 10.875rem;
+    height: 1.5rem;
+    margin: 1.813rem 32.75rem 1.188rem 0;
+    font-family: Montserrat;
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.18px;
+    color: #888;
+  }
 
+  .bookGraph {
+    width: 4.25rem;
+    height: 4.25rem;
+    border-style: solid bleu;
+    border-width: 5px;
+    border-radius: 50%;
+  }
+
+  .book-container {
+    height: 10.625rem;
+    padding: 2rem 9.188rem 1.625rem 1.688rem;
+    border-radius: 4px;
+    border: solid 1px #e8e8e8;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 7%;
+  }
+  
+  h2 {
+    height: 1.813rem;
+    margin: 0.188rem 2.125rem 0 0;
+    font-family: RobotoSlab;
+    font-size: 1.375rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.2px;
+    color: #121212;
+  }
+
+.bookDetail {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.interactions {
+  display: flex;
+  gap:10px;
+}
+
+.bookDetail span {
+  width: 7rem;
+  height: 1.125rem;
+  margin: 0 4rem 0 0;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+}
+
+.bookDetail a,
+.bookDetail button {
+  align-items: center;
+  background-color:#fff ;
+  border: 0;
+  height: 1.188rem;
+  font-family: RobotoSlab;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.Line-2 {
+  width: 0.125rem;
+  height: 1.5rem;
+  border: solid 1px #e8e8e8;
+}
+
+.chapter {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.Current-Chapter {
+  width: 7.875rem;
+  height: 1.125rem;
+  margin: 0.063rem 3.625rem 0 3.688rem;
+  opacity: 0.5;
+  font-family: RobotoSlab;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.Current-Lesson {
+  width: 4.688rem;
+  height: 1.313rem;
+  margin: 0.438rem 6.813rem 0.25rem 3.688rem;
+  font-family: RobotoSlab;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.Rectangle-2 {
+  width: 11.5rem;
+  height: 2.063rem;
+  margin: 0.75rem 0 0.563rem 3.688rem;
+  margin-top: 20px;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  font-family: RobotoSlab;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+}
