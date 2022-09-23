@@ -27,11 +27,6 @@ const AddNewBook = () => {
   const submithandler = (e) => {
     e.preventDefault();
     dispatch(addBook(SubmitBook));
-    setBook({
-      ...newBook,
-      title: '',
-      author: '',
-    });
   };
   return (
     <form action="#" onSubmit={submithandler}>

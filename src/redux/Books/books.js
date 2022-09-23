@@ -1,4 +1,4 @@
-const URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/OyUiXqyBVJcIT8DxplTW/books';
+const URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/OyUiXqyBVJcIT8DxplTW/books/';
 
 const ADD = 'redux/Books/book/ADD';
 const REMOVE = 'redux/Books/book/REMOVE';
