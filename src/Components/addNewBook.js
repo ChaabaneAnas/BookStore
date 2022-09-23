@@ -26,9 +26,11 @@ const AddNewBook = () => {
   return (
     <form action="#" onSubmit={submithandler}>
       <h3>Add new book</h3>
-      <input type="text" className="title" placeholder="book title" onChange={titleHandler} required />
-      <input type="text" className="author" placeholder="book author" onChange={authorHandler} required />
-      <button type="submit" className="addBtn">add book</button>
+      <div className="inputCont">
+        <input type="text" className="title" placeholder="book title" onChange={titleHandler} required />
+        <input type="text" className="author" placeholder="book author" onChange={authorHandler} required />
+        <button type="submit" className="addBtn">add book</button>
+      </div>
     </form>
   );
 };
