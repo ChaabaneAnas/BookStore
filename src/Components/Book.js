@@ -24,7 +24,17 @@ const Book = (props) => {
         </div>
       </div>
 
-      <div className="bookGraph" />
+      <div className="card-2">
+        <div className="rotate">
+          <span className="circle"> </span>
+        </div>
+        <div>
+          <p className="progress-percent">64%</p>
+          <p className="progress-complete">Completed</p>
+        </div>
+      </div>
+
+      <div className="Line-3" />
 
       <div className="chapter">
         <span className="Current-Chapter">Current Chapter</span>
