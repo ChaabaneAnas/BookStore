@@ -1,9 +1,12 @@
-const URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/OyUiXqyBVJcIT8DxplTW/books/';
+import { createAsyncThunk } from '@reduxjs/toolkit';
+
+const URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/OyUiXqyBVJcIT8DxplTW/books';
 
 const ADD = 'redux/Books/book/ADD';
 const REMOVE = 'redux/Books/book/REMOVE';
 const GET = 'redux/Books/book/GET';
 const initialState = [];
+
 export default function bookReducer(state = initialState, action) {
   switch (action.type) {
     case 'redux/Books/book/ADD':
@@ -13,7 +16,7 @@ export default function bookReducer(state = initialState, action) {
       ];
 
     case 'redux/Books/book/REMOVE':
-      return state.filter((book) => book.id !== action.payload);
+      return state.filter((book) => book.item_id !== action.payload);
 
     case 'redux/Books/book/GET':
       return action.payload;
@@ -22,32 +25,26 @@ export default function bookReducer(state = initialState, action) {
   }
 }
 
-const addBook = (book) => (dispatch) => {
-  fetch(URL, {
+const addBook = createAsyncThunk(ADD, async (action) => {
+  const { payload, dispatch } = action;
+  await fetch(URL, {
     method: 'POST',
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({
-      item_id: book.id,
-      title: book.title,
-      author: book.author,
-      category: 'Fiction',
-    }),
-  }).then(() => {
-    dispatch({
-      type: ADD,
-      payload: {
-        id: book.id, title: book.title, author: book.author,
-      },
-    });
+    body: JSON.stringify(payload),
   });
-};
+  dispatch({
+    type: ADD,
+    payload,
+  });
+});
 
-const remBook = (id) => (dispatch) => {
-  const URlId = `${URL}${id}`;
-  fetch(URlId, {
+const remBook = createAsyncThunk(REMOVE, async (action) => {
+  const { id, dispatch } = action;
+  const URlId = `${URL}/${id}`;
+  await fetch(URlId, {
     method: 'DELETE',
     headers: {
       Accept: 'application/json',
@@ -56,21 +53,21 @@ const remBook = (id) => (dispatch) => {
     body: JSON.stringify({
       item_id: id,
     }),
-  }).then(() => {
-    dispatch({
-      type: REMOVE,
-      payload: id,
-    });
-  }).catch((erorr) => console.log(erorr));
-};
+  });
+  dispatch({
+    type: REMOVE,
+    payload: id,
+  });
+});
 
-const getBooks = (dispatch) => {
+const getBooks = createAsyncThunk(GET, (action) => {
+  const dispatch = action;
   fetch(URL).then((response) => response.json())
     .then((data) => {
       const books = Object.keys(data).map((key) => {
         const book = data[key][0];
         return {
-          id: key,
+          item_id: key,
           ...book,
         };
       });
@@ -79,6 +76,6 @@ const getBooks = (dispatch) => {
         payload: books,
       });
     });
-};
+});
 
 export { addBook, remBook, getBooks };

@@ -6,9 +6,10 @@ import { addBook } from '../redux/Books/books';
 const AddNewBook = () => {
   const dispatch = useDispatch();
   const [newBook, setBook] = useState({
-    id: '',
+    item_id: '',
     title: '',
     author: '',
+    category: 'fiction',
   });
   const titleHandler = (e) => {
     setBook({
@@ -22,11 +23,11 @@ const AddNewBook = () => {
     });
   };
 
-  const SubmitBook = { ...newBook, id: uuidv4() };
+  const SubmitBook = { ...newBook, item_id: uuidv4() };
 
   const submithandler = (e) => {
     e.preventDefault();
-    dispatch(addBook(SubmitBook));
+    dispatch(addBook({ payload: SubmitBook, dispatch }));
   };
   return (
     <form action="#" onSubmit={submithandler}>

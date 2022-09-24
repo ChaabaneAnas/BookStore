@@ -10,7 +10,7 @@ import { getBooks } from './redux/Books/books';
 const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getBooks);
+    dispatch(getBooks(dispatch));
   }, []);
   return (
     <>

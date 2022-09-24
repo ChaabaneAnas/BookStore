@@ -16,7 +16,7 @@ const Book = (props) => {
           <span>{author}</span>
         </div>
         <div className="interactions">
-          <button type="submit" onClick={() => dispatch(remBook(id))}>delete</button>
+          <button type="submit" onClick={() => dispatch(remBook({ id, dispatch }))}>delete</button>
           <div className="Line-2" />
           <a href="/">Comment</a>
           <div className="Line-2" />
