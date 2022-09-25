@@ -6,6 +6,15 @@
 that allows the user to add, remove,  edit and navigate throu the website 
 
 
+## Overview
+
+![Screenshot from 2022-09-25 13-31-11](https://user-images.githubusercontent.com/99597333/192144022-78b677e6-8360-4a36-9df9-13029390e3b2.png)
+
+
+
+
+
+
 ## Built With
 
 - Html - Css JavaScript 
@@ -14,7 +23,7 @@ that allows the user to add, remove,  edit and navigate throu the website
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://redux-react-book-store.netlify.app/)
 
 
 ## Getting Started
