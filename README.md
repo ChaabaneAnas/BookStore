@@ -2,8 +2,7 @@
 
 # React BookStore
 
-> a simple interactive web app,
-that allows the user to add, remove,  edit and navigate throu the website 
+A simple interactive web app, that allow users to add remove ,edit books and update their progress  
 
 
 ## Overview
