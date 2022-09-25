@@ -12,9 +12,6 @@ that allows the user to add, remove,  edit and navigate throu the website
 
 
 
-
-
-
 ## Built With
 
 - Html - Css JavaScript 
@@ -28,25 +25,47 @@ that allows the user to add, remove,  edit and navigate throu the website
 
 ## Getting Started
 
+## Setup
 
-To get a local copy up and running follow these simple example steps.
-
-- open ur terminal and copy the project lik from github
-- run `git clone` (the link u copied)
-- cd to the repo then run `code .`
-
-### Prerequisites
-
-### Setup
+To get a local copy up and running you'll need to have [NodeJS](https://nodejs.org/en/download/) installed on your local machine.
 
 ### Install
 
+After installing NodeJS please follow the next steps...
+
 ### Usage
 
-### Run tests
+```bash
+
+npm i
+
+```
+
+-- for installing dev dependecies.
+
+```bash
+
+npm run build
+
+```
+
+-- to run the project.
+
+### Testing
+
+```bash
+
+npm run start
+
+```
 
 ### Deployment
 
+```bash
+
+npm run deploy
+
+```
 
 
 ## Authors
